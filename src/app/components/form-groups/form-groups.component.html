@@ -1,0 +1,11 @@
+<form [formGroup]="animal">
+
+    <label>Name: </label>
+    <input id="name" type="text" formControlName="name">
+    <label>Type: </label>
+    <input id="type" type="text" formControlName="type">
+    <label>Favorit Food: </label>
+    <input id="favoritFood" type="text" formControlName="favoritFood">
+    <button (click)="animalGroup()">Spara</button>
+  
+  </form>

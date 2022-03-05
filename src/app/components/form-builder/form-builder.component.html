@@ -1,0 +1,22 @@
+<form [formGroup]="animals">
+
+  <label>Name: </label>
+  <input type="text" formControlName="names">
+  <label>Type: </label>
+  <input type="text" formControlName="types">
+  <label>Favorit Food: </label>
+  <input type="text" formControlName="favoritFoods">
+  <button type="submit"[disabled]="!animals.valid">Spara</button>
+
+  <div formArrayName="nickNames">
+    <br>
+    <button (click)="addNickname()">Lägg till </button>
+  <div *ngFor="let nick of nickNames.controls; let i=index">
+  <label> The Animals nickname: </label>
+  <input type="text" [formControlName] ="i"/>
+  </div></div>
+  </form>
+
+  <p>Form Status: {{ animals.status }}</p>
+  <p>{{animals.value | json }}</p>
+  

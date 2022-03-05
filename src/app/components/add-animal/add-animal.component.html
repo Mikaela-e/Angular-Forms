@@ -1,0 +1,7 @@
+<label for ="form">Djurets Namn:</label>
+<input id="form" type="text" [formControl]="name"/>
+<button (click)="changeName()">Change the name</button>
+
+<p>
+    {{name.value}}
+</p>
